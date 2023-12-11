@@ -108,4 +108,4 @@ For a set of vectors to be a subspace it must follow 3 conditions:
 - For the vectors $\vec{u}$ and $\vec{v}$, the cross product formula is $\vec{u}\times\vec{v}=i(u_{j}v_{k}-u_{k}v_{j})-j(u_{i}v_{k}-u_{k}v_{i})+k(u_{i}v_{j}-u_{j}v_{i})$
 #### 6.8 Span
 - Problems: 103 
-- A vector $\vec{b}$ is said to be in the span of vector $\vec{a}$ if $\vec{b}$ is a linear combination of $\vec{a}$.
+- A vector $\vec{b}$ is said to be in the span of vector $\vec{a}$ if $\vec{b}$ is a linear combination of $\vec{a}$. $\vec{a}=\begin{bmatrix}6\\8\end{bmatrix}$, $\vec{b}=\begin{bmatrix}24 \\ 32 \end{bmatrix}$, $\vec{b}=4\vec{a}$
