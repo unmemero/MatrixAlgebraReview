@@ -56,3 +56,9 @@ $$B=\begin{bmatrix} 4 & 8 \\ 2 & 3 \\ 4 & 6 \end{bmatrix}3\times 2$$
 <br><br>[Back to Index](#index)
 
 ### 5. Inverse
+- Problems: 50-
+- Inverse matrices $A^{-1}$ only work on matrices of $n\times n$ dimensions. To calculate it you set up matrix $A$ with the identity matrix $I$ as $[A | I]$. We row reduce $A$ until it looks like matrix $I$. The matrix on the right side of the $|$ is our $A^{-1}$ matrix
+$$\begin{bmatrix} 1 & 2 & \bigm| & 1 & 0 \\ 2 & 6 & \bigm| & 0 & 1 \end{bmatrix}\text{, } R_{2}\rightarrow R_{2}-2R_{1}$$
+$$\begin{bmatrix} 1 & 2 & \bigm| & 1 & 0 \\ 0 & 2 & \bigm| & -2 & 1 \end{bmatrix}\text{, }R_{1}\rightarrow R_{1}-R_{2}\text{, }R_{2}\rightarrow \frac{R_2}{2}$$
+$$\begin{bmatrix} 1 & 0 & \bigm| & 3 & -1 \\ 0 & 1 & \bigm| & -1 & \frac{1}{2} \end{bmatrix}$$
+$$A^{-1}=\begin{bmatrix}3 & -1 \\ -1 & \frac{1}{2}\end{bmatrix}$$
