@@ -4,14 +4,15 @@ NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if
 - [FINAL REVIEW](#final-review)
   - [Index](#index)
   - [Topics](#topics)
-    - [1. Solution of systems of equations](#1-solution-of-systems-of-equations)
+    - [1. Solution of systems of equations / Linear dependence and indepence](#1-solution-of-systems-of-equations--linear-dependence-and-indepence)
     - [2. Row echelon form and reduced echelon form](#2-row-echelon-form-and-reduced-echelon-form)
     - [3. Matrix operations and transformations](#3-matrix-operations-and-transformations)
     - [4. Linear combination of vectors](#4-linear-combination-of-vectors)
+    - [5. Inverse](#5-inverse)
 
 ## Topics
-### 1. Solution of systems of equations
-- PROBLEMS: 1 - 13, 18 - 25,32 - 34
+### 1. Solution of systems of equations / Linear dependence and indepence
+- PROBLEMS: 1 - 13, 18 - 25, 32 - 34, 58 - 59
 - You can use substitution, elimination, and augmented matrix row reduction.
 - In any case, the system may end up having infinite many solutions. For that, in matrix row reduction, at least one row will be all zero. If a row ends up being 
   $$\begin{bmatrix}\text{ } 0 & 0 & 0 & \bigm| & \text{number other than 0 } \end{bmatrix}$$
@@ -29,7 +30,7 @@ $\begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}$
 <br><br> [Back to Index](#index)
 
 ### 3. Matrix operations and transformations
-- Problems: 26-31, 38-49
+- Problems: 26-31, 38-49, 54-55, 
 - Addition: To perform addition, matrices must have the exact same dimmensions <br>
 $\begin{bmatrix} 5 &  7 \\ 5 & 8 \end{bmatrix} + \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 5 & 9 \end{bmatrix}$
 - Scalar multiplication: When a vector is multiplied by a scalar, we just distribute the scalar to each of the values of the vectors
@@ -44,9 +45,14 @@ $$B=\begin{bmatrix} 4 & 8 \\ 2 & 3 \\ 4 & 6 \end{bmatrix}3\times 2$$
 <br><br>[Back to index](#index)
 
 ### 4. Linear combination of vectors
-- Problems: 35 - 37
+- Problems: 35 - 37, 49 - 53, 56 - 57
+- These vectors must satisfy $Ax=0$ and the vectors must be linearly dependent
 - Systems of equations with free variables (infinite number of solutions) can be expressed  as linear combinations of vectors 
   $$x_{1}=4+9s_{1}$$
   $$x_{2}=3+2s_{1}$$
   $$\begin{bmatrix}x_{1} \\ x_{2} \end{bmatrix} = \begin{bmatrix}4 \\ 3 \end{bmatrix} + \begin{bmatrix}9 \\ 2 \end{bmatrix} s_{1}$$
+- In order to solve something like $\begin{bmatrix} 7 \\ 0 \\ 4 \end{bmatrix}=a\begin{bmatrix}1 \\ 4 \\ -1 \end{bmatrix}+b\begin{bmatrix}8 \\ 4 \\3 \end{bmatrix}$, we must set the system of vectors as a matrix to get $a$ and $b$.
+  $$\begin{bmatrix}1 & 8 & \bigm| 7 \\ 4 & 4 & \bigm| 0 \\ -1 & 3 & \bigm| 4 \end{bmatrix}$$
 <br><br>[Back to Index](#index)
+
+### 5. Inverse
