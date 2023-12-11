@@ -13,15 +13,20 @@ NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if
       - [6.1 Vector between 2 points](#61-vector-between-2-points)
       - [6.2 Dot product](#62-dot-product)
       - [6.3 Cosine between vectors](#63-cosine-between-vectors)
-      - [6.4 Unit vector in different directions / Vector normalization / Magnitude](#64-unit-vector-in-different-directions--vector-normalization--magnitude)
+      - [6.4 Unit vector in different directions / Vector normalization / Magnitude / Orthonormal](#64-unit-vector-in-different-directions--vector-normalization--magnitude--orthonormal)
       - [6.5 Subspace](#65-subspace)
       - [6.6 Orthogonal projection](#66-orthogonal-projection)
       - [6.7 Cross product](#67-cross-product)
       - [6.8 Span](#68-span)
+      - [6.9 Null space and basis](#69-null-space-and-basis)
+    - [7. Graham-Schmidt process](#7-graham-schmidt-process)
+    - [8. Transformations](#8-transformations)
+    - [9. Eigenvector and Eigenvalues](#9-eigenvector-and-eigenvalues)
+    - [10. Diagonal](#10-diagonal)
 
 ## Topics
 ### 1. Solution of systems of equations / Linear dependence and indepence
-- PROBLEMS: 1 - 13, 18 - 25, 32 - 34, 58 - 59
+- PROBLEMS: 1 - 13, 18 - 25, 32 - 34, 58 - 59, 119 - 122
 - You can use substitution, elimination, and augmented matrix row reduction.
 - In any case, the system may end up having infinite many solutions. For that, in matrix row reduction, at least one row will be all zero. If a row ends up being 
   $$\begin{bmatrix}\text{ } 0 & 0 & 0 & \bigm| & \text{number other than 0 } \end{bmatrix}$$
@@ -39,7 +44,7 @@ $\begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}$
 <br><br> [Back to Index](#index)
 
 ### 3. Matrix operations and transformations
-- Problems: 26-31, 38-49, 54-55, 
+- Problems: 26-31, 38-49, 54-55
 - Addition: To perform addition, matrices must have the exact same dimmensions <br>
 $\begin{bmatrix} 5 &  7 \\ 5 & 8 \end{bmatrix} + \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 5 & 9 \end{bmatrix}$
 - Scalar multiplication: When a vector is multiplied by a scalar, we just distribute the scalar to each of the values of the vectors
@@ -84,7 +89,7 @@ $$A^{-1}=\begin{bmatrix}3 & -1 \\ -1 & \frac{1}{2}\end{bmatrix}$$
 #### 6.3 Cosine between vectors
 - Problems: 77
 - To obtain the cosine between vectors $\vec{u} = <10,7,8>$ and $\vec{v}=<10,5,4>$, you use the formula $cos\theta = \frac{u\cdot v}{\lVert u \rVert \lVert v \rVert}=\frac{10(10)+7(5)+8(4)}{\sqrt{10^{2}+7^{2}+8^{2}}\sqrt{10^{2}+5^{2}+4^{2}}}=\frac{167}{\sqrt{213}\sqrt{141}}$
-#### 6.4 Unit vector in different directions / Vector normalization / Magnitude
+#### 6.4 Unit vector in different directions / Vector normalization / Magnitude / Orthonormal
 - Problems: 78 - 80, 97 - 102
 - Magnitude for vector $\vec{u}=<a,b,c>$ $\lVert \vec{u}\rVert = \sqrt{a^{2}+b^{2}+c^{2}}$
 - Unit vector is also known as vector normalization
@@ -101,13 +106,33 @@ For a set of vectors to be a subspace it must follow 3 conditions:
   - It is closed under addition
   - It is closed under scalar multiplication
 #### 6.6 Orthogonal projection
-- Problems: 93 
+- Problems: 93 , 139 - 147, 
+- Vectors that are orthogonal have a [Dot product](#62-dot-product) equal to 0. $\vec{a}\cdot \vec{b} = 0$
 - To compute the orthogonal (right angle) projection of vector $\vec{u}$ onto Line $L$, then we use $proj_{L}(\vec{u})=\frac{\vec{u}\cdot L}{L\cdot L} L$. Please denote that $\cdot$ denotes [Dot product](#62-dot-product).
 #### 6.7 Cross product
 - Problems: 94-96
 - For the vectors $\vec{u}$ and $\vec{v}$, the cross product formula is $\vec{u}\times\vec{v}=i(u_{j}v_{k}-u_{k}v_{j})-j(u_{i}v_{k}-u_{k}v_{i})+k(u_{i}v_{j}-u_{j}v_{i})$
 #### 6.8 Span
-- Problems: 103 
+- Problems: 103 - 118, 123
 - A vector $\vec{b}$ is said to be in the span of vector $\vec{a}$ if $\vec{b}$ is a linear combination of $\vec{a}$. $\vec{a}=\begin{bmatrix}6\\8\end{bmatrix}$, $\vec{b}=\begin{bmatrix}24 \\ 32 \end{bmatrix}$, $\vec{b}=4\vec{a}$
 - ![Span of W](./i/spanW.png)
 - To determine if a span is a line, plane, or $\mathbb{R}^3$: for a line, all vectors are multiples of the first. For plane, the first component of the first vector must be a multiple of the rest. Everything else is $\mathbb{R}^3$.
+#### 6.9 Null space and basis
+- Problems: 124 - 138, 151-153
+- We first row reduce the matrix until we can get a set of linearly independent vectors with our result column set all to 0's (homogeneous matrix) to get the null space
+- The basis is similar to the null space. They are matrices after gaussian elimination in sum of vectors form, but with commas in between instead of plus signs.
+
+### 7. Graham-Schmidt process
+- Problems: 148 - 150
+- In this process we have 2 to 3 vectors
+- For two vectors $\vec{x}$ and $\vec{y}$, we obtain 2 vectors which are $\vec{u_1}=\frac{\vec{x}}{\lVert \vec{x} \rVert}$, and $\vec{u_2}=y-proj_{u_1}y$
+- For three vectors $x$, $y$, $z$, we obtain 3 vectors: $\vec{u_1}=\frac{\vec{x}}{\lVert \vec{x} \rVert}$, $\vec{u_2}=u_1-proj_{u_1}y$ and $u_3=z-proj_{u_1}z-proj_{u_2}z$
+- <span style="color:red;">IMPORTANT<span> Always check for orthonormal.
+### 8. Transformations
+- Problems: 154 - 160
+### 9. Eigenvector and Eigenvalues
+- Problems: 161 - 205
+### 10. Diagonal
+- Problems: 206 - 214
+- For matrix $A=\begin{bmatrix}a &b \\ c & d\end{bmatrix}$, we first obtain the eigenvalues $\lambda_1$ and $\lambda_2$, and the eigenvectors $v_1$ and $v_2$. With this we form matrix $P=\begin{bmatrix}v_1 & v_2\end{bmatrix}$ and matrix $D=\begin{bmatrix}\lambda_1 & 0 \\ 0 & \lambda_2\end{bmatrix}$
+- Remember $A=PDP^{-1}$ and $D=P^{-1}AP$
