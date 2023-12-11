@@ -1,4 +1,5 @@
 # FINAL REVIEW 
+NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if it gives you any problems viewing the equations
 ## Index
 - [FINAL REVIEW](#final-review)
   - [Index](#index)
