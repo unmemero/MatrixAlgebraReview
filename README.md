@@ -9,6 +9,10 @@ NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if
     - [3. Matrix operations and transformations](#3-matrix-operations-and-transformations)
     - [4. Linear combination of vectors](#4-linear-combination-of-vectors)
     - [5. Inverse](#5-inverse)
+    - [6. Vectors](#6-vectors)
+      - [6.1 Vector between 2 points](#61-vector-between-2-points)
+      - [6.2 Dot product](#62-dot-product)
+      - [6.3 Cosine between vectors](#63-cosine-between-vectors)
 
 ## Topics
 ### 1. Solution of systems of equations / Linear dependence and indepence
@@ -56,9 +60,21 @@ $$B=\begin{bmatrix} 4 & 8 \\ 2 & 3 \\ 4 & 6 \end{bmatrix}3\times 2$$
 <br><br>[Back to Index](#index)
 
 ### 5. Inverse
-- Problems: 50-
+- Problems: 50-71
 - Inverse matrices $A^{-1}$ only work on matrices of $n\times n$ dimensions. To calculate it you set up matrix $A$ with the identity matrix $I$ as $[A | I]$. We row reduce $A$ until it looks like matrix $I$. The matrix on the right side of the $|$ is our $A^{-1}$ matrix
 $$\begin{bmatrix} 1 & 2 & \bigm| & 1 & 0 \\ 2 & 6 & \bigm| & 0 & 1 \end{bmatrix}\text{, } R_{2}\rightarrow R_{2}-2R_{1}$$
 $$\begin{bmatrix} 1 & 2 & \bigm| & 1 & 0 \\ 0 & 2 & \bigm| & -2 & 1 \end{bmatrix}\text{, }R_{1}\rightarrow R_{1}-R_{2}\text{, }R_{2}\rightarrow \frac{R_2}{2}$$
 $$\begin{bmatrix} 1 & 0 & \bigm| & 3 & -1 \\ 0 & 1 & \bigm| & -1 & \frac{1}{2} \end{bmatrix}$$
 $$A^{-1}=\begin{bmatrix}3 & -1 \\ -1 & \frac{1}{2}\end{bmatrix}$$
+<br><br>[Back to index](#index)
+
+### 6. Vectors
+#### 6.1 Vector between 2 points
+- Problems: 72 - 75
+- If we have 2 points $A=(-3,0,3)$ and $B=(1,8,-1)$, and we want to obtain $\overrightarrow{AB}$, then $\overrightarrow{AB}=<1-(-3),8-0,-1-3>=<4,8,-4>$.
+- Midpoint formula for $P(x,y,z)$ and $Q(x,y,z)$: $(\frac{P_{x}+Q_{x}}{2},\frac{P_{y}+Q_{y}}{2} \frac{P_{z}+Q_{z}}{2})$
+#### 6.2 Dot product
+- Problems: 76
+- For two vectors $\vec{u} = <1,0,-3>$ and $\vec{v}=<-1,4,5>$, the formula to obtan the dot product is $\vec{u}\cdot \vec{v} = 1(-1)+0(4)+(-3)(5)=-1+0-15=-16$
+#### 6.3 Cosine between vectors
+- Problems: 77
