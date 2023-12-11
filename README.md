@@ -109,5 +109,5 @@ For a set of vectors to be a subspace it must follow 3 conditions:
 #### 6.8 Span
 - Problems: 103 
 - A vector $\vec{b}$ is said to be in the span of vector $\vec{a}$ if $\vec{b}$ is a linear combination of $\vec{a}$. $\vec{a}=\begin{bmatrix}6\\8\end{bmatrix}$, $\vec{b}=\begin{bmatrix}24 \\ 32 \end{bmatrix}$, $\vec{b}=4\vec{a}$
-- ![Span of W](./images/spanW.png)
+- ![Span of W](./i/spanW.png)
 - To determine if a span is a line, plane, or $\mathbb{R}^3$: for a line, all vectors are multiples of the first. For plane, the first component of the first vector must be a multiple of the rest. Everything else is $\mathbb{R}^3$.
