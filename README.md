@@ -30,4 +30,4 @@ $\begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}$
 $\begin{bmatrix} 5 &  7 \\ 5 & 8 \end{bmatrix} + \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 5 & 9 \end{bmatrix}$
 - Scalar multiplication: When a vector is multiplied by a scalar, we just distribute the scalar to each of the values of the vectors
 $$2 \cdot \begin{bmatrix} 8 & 4 \\ 5 & 2 \end{bmatrix} = \begin{bmatrix} 16 & 8 \\ 10 & 4 \end{bmatrix}$$
-<br><br>[Back to index]
+<br><br>[Back to index](#index)
