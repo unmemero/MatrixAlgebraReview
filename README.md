@@ -13,6 +13,11 @@ NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if
       - [6.1 Vector between 2 points](#61-vector-between-2-points)
       - [6.2 Dot product](#62-dot-product)
       - [6.3 Cosine between vectors](#63-cosine-between-vectors)
+      - [6.4 Unit vector in different directions / Vector normalization / Magnitude](#64-unit-vector-in-different-directions--vector-normalization--magnitude)
+      - [6.5 Subspace](#65-subspace)
+      - [6.6 Orthogonal projection](#66-orthogonal-projection)
+      - [6.7 Cross product](#67-cross-product)
+      - [6.8 Span](#68-span)
 
 ## Topics
 ### 1. Solution of systems of equations / Linear dependence and indepence
@@ -78,3 +83,29 @@ $$A^{-1}=\begin{bmatrix}3 & -1 \\ -1 & \frac{1}{2}\end{bmatrix}$$
 - For two vectors $\vec{u} = <1,0,-3>$ and $\vec{v}=<-1,4,5>$, the formula to obtan the dot product is $\vec{u}\cdot \vec{v} = 1(-1)+0(4)+(-3)(5)=-1+0-15=-16$
 #### 6.3 Cosine between vectors
 - Problems: 77
+- To obtain the cosine between vectors $\vec{u} = <10,7,8>$ and $\vec{v}=<10,5,4>$, you use the formula $cos\theta = \frac{u\cdot v}{\lVert u \rVert \lVert v \rVert}=\frac{10(10)+7(5)+8(4)}{\sqrt{10^{2}+7^{2}+8^{2}}\sqrt{10^{2}+5^{2}+4^{2}}}=\frac{167}{\sqrt{213}\sqrt{141}}$
+#### 6.4 Unit vector in different directions / Vector normalization / Magnitude
+- Problems: 78 - 80, 97 - 102
+- Magnitude for vector $\vec{u}=<a,b,c>$ $\lVert \vec{u}\rVert = \sqrt{a^{2}+b^{2}+c^{2}}$
+- Unit vector is also known as vector normalization
+- Same direction: $\frac{\vec{u}}{\lVert\vec{u}\rVert}$
+- Opposite: $\frac{-\vec{u}}{\lVert\vec{u}\rVert}$
+- With two points [See 6.1 to get vector first](#61-vector-between-2-points), then get same direction unit vector.
+- With positive first coordinate and 3 points $P=(a,b,c)$,$Q=(e,d,f)$, and $R=(g,h,i)$
+$$\frac{(Q-P)\times(R-P)}{\lVert(Q-P)\times(R-P)\rVert}=ai+bj+ck$$
+- Area of the parallelogram with points $A,B,C,D$: $\lVert \vec{AB} \times \vec{AD} \rVert$
+#### 6.5 Subspace
+Problems: 81-90
+For a set of vectors to be a subspace it must follow 3 conditions:
+  - It contains the 0 vector
+  - It is closed under addition
+  - It is closed under scalar multiplication
+#### 6.6 Orthogonal projection
+- Problems: 93 
+- To compute the orthogonal (right angle) projection of vector $\vec{u}$ onto Line $L$, then we use $proj_{L}(\vec{u})=\frac{\vec{u}\cdot L}{L\cdot L} L$. Please denote that $\cdot$ denotes [Dot product](#62-dot-product).
+#### 6.7 Cross product
+- Problems: 94-96
+- For the vectors $\vec{u}$ and $\vec{v}$, the cross product formula is $\vec{u}\times\vec{v}=i(u_{j}v_{k}-u_{k}v_{j})-j(u_{i}v_{k}-u_{k}v_{i})+k(u_{i}v_{j}-u_{j}v_{i})$
+#### 6.8 Span
+- Problems: 103 
+- A vector $\vec{b}$ is said to be in the span of vector $\vec{a}$ if $\vec{b}$ is a linear combination of $\vec{a}$.
