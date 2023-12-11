@@ -13,7 +13,9 @@ NOTE: PLEASE DOWNLOAD THE `README.md` file and open it in any markdown editor if
 ### 1. Solution of systems of equations
 - PROBLEMS: 1 - 13, 18 - 25,32 - 34
 - You can use substitution, elimination, and augmented matrix row reduction.
-- In any case, the system may end up having infinite many solutions. For that, in matrix row reduction, at least one row will be all zero. If a row ends up being $\begin{bmatrix}\text{ } 0 & 0 & 0 & \bigm| & \text{number other than 0 } \end{bmatrix}$, then there is no solution.
+- In any case, the system may end up having infinite many solutions. For that, in matrix row reduction, at least one row will be all zero. If a row ends up being 
+  $$\begin{bmatrix}\text{ } 0 & 0 & 0 & \bigm| & \text{number other than 0 } \end{bmatrix}$$
+  , then there is no solution.
 - To know if the system has infinite many solutions, the number columns (n), has to be greater than the number of rows (m). This also applies to 
 <br><br> [Back to Index](#index)
 
